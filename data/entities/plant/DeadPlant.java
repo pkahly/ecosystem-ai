@@ -1,12 +1,13 @@
 package data.entities.plant;
 
+import java.awt.Color;
 import data.entities.Entity;
 import data.world.Position;
 import data.world.World;
 import util.RandomUtil;
 
 public class DeadPlant extends Entity {
-	private static final int COLOR = 0;
+	private static final Color COLOR = Color.BLACK;
 	private static final int DECAY_CHANCE_PER_AGE = 4;
 	
 	public DeadPlant() {
@@ -26,7 +27,7 @@ public class DeadPlant extends Entity {
 	}
 
 	@Override
-	public int getColor() {
+	public Color getColor() {
 		return COLOR;
 	}
 }

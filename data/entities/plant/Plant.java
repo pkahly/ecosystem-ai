@@ -1,5 +1,6 @@
 package data.entities.plant;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +10,8 @@ import data.world.World;
 import util.RandomUtil;
 
 public class Plant extends Entity {
-	private static final int NEW_COLOR = 30;
-	private static final int OLD_COLOR = 20;
+	private static final Color NEW_COLOR = new Color(8, 204, 60);
+	private static final Color OLD_COLOR = new Color(2, 84, 24);
 	private static final int ACTION_DISTANCE = 2;
 	private static final int REPRODUCTION_CHANCE = 10;
 	private static final int DEATH_CHANCE_PER_AGE = 1;
@@ -43,7 +44,7 @@ public class Plant extends Entity {
 	}
 
 	@Override
-	public int getColor() {
+	public Color getColor() {
 		if (age < 10) {
 			return NEW_COLOR;
 		}

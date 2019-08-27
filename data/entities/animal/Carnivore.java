@@ -1,5 +1,6 @@
 package data.entities.animal;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import data.world.World;
 public class Carnivore extends Entity {
 	private static final int SENSING_DISTANCE = 10;
 	private static final int ACTION_DISTANCE = 1;
-	private static final int COLOR = 180;
+	private static final Color COLOR = Color.RED;
 	private static final int SPEED = 1;
 
 	private List<Type> foodTypes = new ArrayList<>();
@@ -60,7 +61,7 @@ public class Carnivore extends Entity {
 	}
 
 	@Override
-	public int getColor() {
+	public Color getColor() {
 		return COLOR;
 	}
 }

@@ -1,5 +1,6 @@
 package data.entities.animal;
 
+import java.awt.Color;
 import data.entities.Entity;
 import data.entities.plant.Plant;
 import data.world.Position;
@@ -7,7 +8,7 @@ import data.world.World;
 import util.RandomUtil;
 
 public class DeadAnimal extends Entity {
-	private static final int COLOR = 80;
+	private static final Color COLOR = new Color(108, 50, 179);
 	private static final int DECAY_CHANCE_PER_AGE = 10;
 	
 	public DeadAnimal() {
@@ -27,7 +28,7 @@ public class DeadAnimal extends Entity {
 	}
 
 	@Override
-	public int getColor() {
+	public Color getColor() {
 		return COLOR;
 	}
 }

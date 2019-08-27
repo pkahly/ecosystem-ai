@@ -1,5 +1,6 @@
 package data.entities.animal;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,9 +8,9 @@ import data.entities.Entity.Type;
 import util.RandomUtil;
 
 public class GeneticCode {
-	private static final int HERBAVORE_COLOR = 200;
-	private static final int OMNIVORE_COLOR = 100;
-	private static final int CARNIVORE_COLOR = 180;
+	private static final Color HERBAVORE_COLOR = new Color(250, 184, 72);
+	private static final Color OMNIVORE_COLOR = new Color(145, 135, 118);
+	private static final Color CARNIVORE_COLOR = Color.RED;
 	
 	private static final int SENSING_DISTANCE = 10;
 	private static final int SPEED = 1;
@@ -43,7 +44,7 @@ public class GeneticCode {
 		return childCode;
 	}
 	
-	public int getColor() {
+	public Color getColor() {
 		Type type = getType();
 		
 		if (type == Type.HERBAVORE) {
@@ -54,7 +55,7 @@ public class GeneticCode {
 			return CARNIVORE_COLOR;
 		}
 		
-		return 0;
+		return Color.BLACK;
 	}
 	
 	public Type getType() {

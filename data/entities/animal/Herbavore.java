@@ -1,5 +1,6 @@
 package data.entities.animal;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,7 +102,7 @@ public class Herbavore extends Entity {
 	}
 
 	@Override
-	public int getColor() {
+	public Color getColor() {
 		return config.getColor();
 	}
 	

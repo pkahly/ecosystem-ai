@@ -1,5 +1,6 @@
 package data.entities;
 
+import java.awt.Color;
 import data.world.Position;
 import data.world.World;
 
@@ -26,6 +27,6 @@ public abstract class Entity {
 		return type;
 	}
 
-	public abstract int getColor();
+	public abstract Color getColor();
 	public abstract void tick(World world, Position pos);
 }

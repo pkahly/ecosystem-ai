@@ -1,5 +1,6 @@
 package data.world;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -81,14 +82,14 @@ public class World {
 		return height;
 	}
 
-	public int getColorValue(int row, int column) {
+	public Color getColorValue(int row, int column) {
 		Entity entity = worldArray[row][column];
 		
 		if (entity != null) {
 			return entity.getColor();
 		}
 		
-		return 255;
+		return new Color(250, 250, 232);
 	}
 	
 	public Position getUpdatedPosition(Position pos) {
