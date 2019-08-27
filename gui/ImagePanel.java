@@ -8,7 +8,7 @@ import java.util.Set;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import data.entities.Entity;
-import data.entities.ai.SmartAnimal;
+import data.entities.animal.SmartAnimal;
 import data.world.World;
 import util.ImageUtil;
 

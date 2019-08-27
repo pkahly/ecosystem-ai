@@ -9,8 +9,6 @@ import java.util.Set;
 
 import data.entities.Entity;
 import data.entities.Entity.Type;
-import data.entities.animal.Herbavore;
-import data.entities.animal.GeneticCode;
 import data.entities.plant.Plant;
 import util.RandomUtil;
 
@@ -56,22 +54,6 @@ public class World {
 		}
 		
 		return processed;
-	}
-	
-	public Iterator<GeneticCode> getGeneticData() {
-		List<GeneticCode> genetics = new ArrayList<>();
-		
-		for (int row = 0; row < height; row++) {
-			for (int column = 0; column < width; column++) {
-				Entity entity = worldArray[row][column];
-				if (entity instanceof Herbavore) {
-					Herbavore animal = (Herbavore) entity;
-					genetics.add(animal.getGenetics());
-				}
-			}
-		}
-		
-		return genetics.iterator();
 	}
 	
 	public int width() {
@@ -169,6 +151,7 @@ public class World {
 		return true;
 	}
 
+/*
 	public Herbavore findFirstAnimal() {
 		for (int row = 0; row < height; row++) {
 			for (int column = 0; column < width; column++) {
@@ -182,6 +165,7 @@ public class World {
 		
 		return null;
 	}
+*/
 
 	public Position getNearestObject(Position pos, int rowMod, int colMod) {
 		int row = pos.getRow() + rowMod;

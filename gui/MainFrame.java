@@ -3,7 +3,7 @@ package gui;
 import java.awt.*;
 import javax.swing.*;
 
-import data.entities.ai.SmartAnimal;
+import data.entities.animal.SmartAnimal;
 import data.world.Position;
 import data.world.World;
 

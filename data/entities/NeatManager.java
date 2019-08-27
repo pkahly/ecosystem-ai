@@ -1,16 +1,21 @@
-package data.entities.ai;
+package data.entities;
 
 import java.util.Set;
 
+import data.entities.animal.SmartAnimal;
 import data.entities.Entity;
 import data.world.Position;
 import data.world.World;
 import gui.MainFrame;
+
+// TODO enable or find another library
+/*
 import nl.sandergielisse.mythan.CustomizedSigmoidActivation;
 import nl.sandergielisse.mythan.FitnessCalculator;
 import nl.sandergielisse.mythan.Mythan;
 import nl.sandergielisse.mythan.Network;
 import nl.sandergielisse.mythan.Setting;
+*/
 
 public class NeatManager {
 	private static final int POPULATION_SIZE = 10000;
@@ -24,6 +29,8 @@ public class NeatManager {
 	}
 	
 	public void run() {
+      // TODO enable or rewrite
+	   /*
 		Mythan instance = Mythan.newInstance(SmartAnimal.NETWORK_INPUTS, SmartAnimal.NETWORK_OUTPUTS, new CustomizedSigmoidActivation(), new FitnessCalculator() {
 
 			@Override
@@ -78,6 +85,7 @@ public class NeatManager {
 		instance.setSetting(Setting.BREED_CROSS_CHANCE, 0.8);
 
 		instance.trainToFitness(POPULATION_SIZE, IDEAL_FITNESS);
+		*/
 	}
 
 	private void waitTilDead(SmartAnimal animal) {

@@ -1,9 +1,9 @@
 package main;
 
-import data.entities.ai.NeatManager;
+import data.entities.NeatManager;
 import gui.MainFrame;
 
-public class NeatMain {
+public class Main {
 	public static void main(String[] args) {
 		MainFrame mainframe = new MainFrame();
 		new NeatManager(mainframe).run();
