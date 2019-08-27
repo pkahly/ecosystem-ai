@@ -1,4 +1,4 @@
-### Ecosystem Simulator [old project - needs work]
+### Ecosystem-AI Simulator [old project - needs work]
 
 Simulates an ecosystem using plants, herbavores and carnivores.
 
