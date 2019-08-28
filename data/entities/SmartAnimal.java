@@ -1,10 +1,9 @@
-package data.entities.animal;
+package data.entities;
 
 import java.awt.Color;
 import data.entities.Entity;
 import data.world.Position;
 import data.world.World;
-//import nl.sandergielisse.mythan.Network;
 
 public class SmartAnimal extends Entity {
 	public static final int NETWORK_INPUTS = 18;
@@ -12,13 +11,11 @@ public class SmartAnimal extends Entity {
 	public static final Color COLOR = Color.ORANGE;
 	public static final int STARVATION_TIMER = 20;
 	
-	//private Network network;
 	private boolean isDead = false;
 	private int foodEaten = 0;
 
-	public SmartAnimal() {//Network network) {
+	public SmartAnimal() {
 		super(Type.HERBAVORE);
-		//this.network = network;
 	}
 
 	@Override
@@ -49,11 +46,6 @@ public class SmartAnimal extends Entity {
 			// Feeding
 			foodEaten++;
 			world.move(pos, newPos);
-		}
-		
-		// If hunger drops to 0, die
-		if (age > 20) {
-			isDead = true;
 		}
 	}
 	
@@ -106,7 +98,7 @@ public class SmartAnimal extends Entity {
 		inputs[17] = directionPos.distance(pos);
 		
 		// Convert relative movements to coordinates
-		double[] outputs = new double[4];//network.calculate(inputs);
+		double[] outputs = new double[4];
 		int newRow = pos.getRow() + getCoordFromOutput(outputs[0], outputs[1]);
 		int newCol = pos.getColumn() + getCoordFromOutput(outputs[2], outputs[3]);
 		

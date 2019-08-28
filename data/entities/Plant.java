@@ -1,4 +1,4 @@
-package data.entities.plant;
+package data.entities;
 
 import java.awt.Color;
 import java.util.ArrayList;

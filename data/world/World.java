@@ -9,7 +9,7 @@ import java.util.Set;
 
 import data.entities.Entity;
 import data.entities.Entity.Type;
-import data.entities.plant.Plant;
+import data.entities.Plant;
 import util.RandomUtil;
 
 public class World {
@@ -150,22 +150,6 @@ public class World {
 		
 		return true;
 	}
-
-/*
-	public Herbavore findFirstAnimal() {
-		for (int row = 0; row < height; row++) {
-			for (int column = 0; column < width; column++) {
-				Entity entity = worldArray[row][column];
-				
-				if (entity instanceof Herbavore) {
-					return (Herbavore) entity;
-				}
-			}
-		}
-		
-		return null;
-	}
-*/
 
 	public Position getNearestObject(Position pos, int rowMod, int colMod) {
 		int row = pos.getRow() + rowMod;

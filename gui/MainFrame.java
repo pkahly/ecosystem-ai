@@ -3,7 +3,7 @@ package gui;
 import java.awt.*;
 import javax.swing.*;
 
-import data.entities.animal.SmartAnimal;
+import data.entities.SmartAnimal;
 import data.world.Position;
 import data.world.World;
 
@@ -27,7 +27,7 @@ public class MainFrame extends JFrame {
 		tk = Toolkit.getDefaultToolkit();
 		d = tk.getScreenSize();
 		
-		setSize(d.width / 2, d.height / 2);
+		setSize(d.width, d.height);
 		setLocation(0, 0);
 		  
 		setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
